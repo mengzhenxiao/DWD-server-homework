@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>User Information</title>
+		<!-- <link rel="stylesheet" type="text/css" href="style.css" /> -->
+	</head>
+	<body>
+
+		<form method="GET" action="/processit">
+     Username：<input type="text" name="username" value="" size="10" maxlength="5">
+     <br>
+     <br>
+     Password：<input type="password" value="" name="password" size="10">
+     <br>
+     <br>
+     Gender：
+		 <!-- <input type="radio" name="gender" checked="checked">Male<input type="radio" name="gender">Female -->
+     <br>
+		 Male <input type="radio" name="male" value="Male" />
+     Female<input type="radio" name="female" value="Female" />
+     <br>
+     <br>
+		 Favourite Color: <input type="color" name="somecolor">
+		 <br>
+     <br>
+     Introduction：<br>
+     <textarea cols="35" rows="10" name="introduction">Who are you?</textarea>
+     <br>
+     <br>
+     <br>
+     <br>
+     <input type="submit" value="Submit">
+     <input type="reset" value="Reset">
+   </form>
+
+	</body>
+</html>
