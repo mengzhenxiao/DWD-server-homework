@@ -6,9 +6,11 @@ var app = express();
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
-app.get('/', function (req, res) {
-	res.sendFile("moodpalette.html", {root: './public'}); // Files inside "public" folder
-});
+// app.get('/', function (req, res) {
+// 	res.sendFile("moodpalette.html", {root: './public'}); // Files inside "public" folder
+// });
+
+app.use(express.static('public'));
 
 
 // index page
