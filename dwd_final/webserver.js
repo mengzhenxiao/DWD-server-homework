@@ -9,6 +9,7 @@ var urlencodedParser = bodyParser.urlencoded({
 app.use(urlencodedParser);
 
 var mongojs = require('mongojs');
+var db = mongojs("subuser:177607040421@ds021989.mlab.com:21989/dwdtesting", ["myjournal"]);
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');
@@ -17,19 +18,23 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 
-var db = mongojs("subuser:177607040421@ds021989.mlab.com:21989/dwdtesting", ["thesubmissions"]);
+
 
 app.get('/myjournal', function(req, res) {
   var data = {
-    person: {
-      name: req.query.inputEmail,
-      other: req.query.inputPassword
-    }
+      dailyChallenge: req.query.checkBox,
+      learnt:req.query.thingsIlearnt,
+      better:req.query.thingsToBetter,
+      gratefulthings: {
+        first:req.query.grateful1,
+        second:req.query.grateful2,
+        third:req.query.grateful3
+      }
   };
-  res.render('pages/index', data);
+  // res.render('pages/index', data);
 
-  db.thesubmissions.save({
-    "user": data
+  db.myjournal.save({
+    "journal": data
   }, function(err, saved) {
     if (err || !saved) console.log("Not saved");
     else console.log("Saved");
