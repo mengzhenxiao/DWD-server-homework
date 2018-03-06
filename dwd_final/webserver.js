@@ -20,15 +20,15 @@ app.use(express.static('public'));
 
 
 
-app.get('/myjournal', function(req, res) {
+app.post('/myjournal', function(req, res) {
   var data = {
-    dailyChallenge: req.query.checkBox,
-    learnt: req.query.thingsIlearnt,
-    better: req.query.thingsToBetter,
+    dailyChallenge: req.body.checkBox,
+    learnt: req.body.thingsIlearnt,
+    better: req.body.thingsToBetter,
     gratefulthings: {
-      first: req.query.grateful1,
-      second: req.query.grateful2,
-      third: req.query.grateful3
+      first: req.body.grateful1,
+      second: req.body.grateful2,
+      third: req.body.grateful3
     }
   };
 
