@@ -3,39 +3,37 @@
 
 <head>
   <title>My Five-minute Journal</title>
-  <!-- <link rel="stylesheet" type="text/css" href="css1.css"> -->
+  <link rel="stylesheet" type="text/css" href="css1.css">
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
-  <!-- <script src="scripts1.js"></script> -->
+  <script src="scripts1.js"></script>
   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
 
 <body>
   <div id="slideshow">
-    <% data.forEach(function(data) {  %>
-		<h2><%= data.journal.learnt %><h2>
-<% }); %>
 
-    <!-- <div class="slideitem current">
-      <img src="http://basik.ru/images/1920x1080_63/15_1920x1080.jpg">
+
+    <div class="slideitem current">
+
+      <% data.forEach(function(data) {  %>
+      <h2><%= data.journal.learnt %><h2>
+     <% }); %>
+
     </div>
     <div class="slideitem">
-      <img src="http://i2.fastpic.ru/big/2010/0321/36/49436230f02b95ce11f903fc8f683936.jpg">
+      <% data.forEach(function(data) {  %>
+      <h2><%= data.journal.better %><h2>
+     <% }); %>
     </div>
     <div class="slideitem">
-      <img src="http://k37.kn3.net/1B107A604.jpg">
+      <% data.forEach(function(data) {  %>
+      <h2><%= data.journal.gratefulthings.first %><h2>
+      <h2><%= data.journal.gratefulthings.second %><h2>
+      <h2><%= data.journal.gratefulthings.third %><h2>
+     <% }); %>
     </div>
-    <div class="slideitem">
-      <img src="http://wallpaperscraft.com/image/87654/1920x1080.jpg">
-    </div>
-    <div class="slideitem">
-      <img src="http://hdwallpaperbackgrounds.net/wp-content/uploads/2015/09/Skyrim-Full-HD-1920x1080-Wallpapers.jpg">
-    </div>
-    <div class="slideitem">
-      <img src="http://mirtajn.com/uploads/posts/2013-01/1359577392_high_altitude_eclipse_by_nethskie-d2xq0ww.jpg">
-    </div>
-    <div class="slideitem">
-      <img src="http://img15.nnm.me/3/4/2/b/2/3f06025f75b6fd3544b947da06f.jpg">
-    </div> -->
+    
+
   </div>
 
 

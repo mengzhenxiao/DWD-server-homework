@@ -49,16 +49,12 @@ app.get('/myjournal', function(req, res) {
         for (var i = 0; i < saved.length; i++) {
           mongoData.push(saved[i]);
         }
-        // console.log(mongoData);
-        var sendData = {data: mongoData};
+        var sendData = {
+          data: mongoData
+        };
         res.render('pages/index', sendData);
       });
 
-      /* Alternatively you could loop through the records with a "for"
-  	for (var i = 0; i < saved.length; i++) {
-	  	console.log(saved[i]);
-	}
-	*/
     }
   });
 
