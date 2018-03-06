@@ -10,37 +10,48 @@
 </head>
 
 <body>
+
+
   <div id="slideshow">
 
 
     <div class="slideitem current">
-
+      <h1>What I learnt?</h1>
+      <br>
+      <br>
       <% data.forEach(function(data) {  %>
-      <h2><%= data.journal.learnt %><h2>
+        <p><%= data.journal.learnt %><p>
      <% }); %>
 
     </div>
     <div class="slideitem">
+      <h1>How could I have made my day even better?</h1>
+      <br>
+      <br>
       <% data.forEach(function(data) {  %>
-      <h2><%= data.journal.better %><h2>
+      <p><%= data.journal.better %><p>
      <% }); %>
     </div>
     <div class="slideitem">
+      <h1>I am grateful for...</h1>
+      <br>
+      <br>
       <% data.forEach(function(data) {  %>
-      <h2><%= data.journal.gratefulthings.first %><h2>
-      <h2><%= data.journal.gratefulthings.second %><h2>
-      <h2><%= data.journal.gratefulthings.third %><h2>
+      <p><%= data.journal.gratefulthings.first %><p>
+      <p><%= data.journal.gratefulthings.second %><p>
+      <p><%= data.journal.gratefulthings.third %><p>
      <% }); %>
     </div>
-    
-
   </div>
 
+  <button id="addNew" onclick="location.href='/#form'">Write</button>
 
-  <footer>
+
+
+  <!-- <footer>
     <p class="text-center text-muted">© Copyright 2018 Mengzhen Xiao</p>
   </footer>
 
-</body>
+</body> -->
 
 </html>

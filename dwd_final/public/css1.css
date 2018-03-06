@@ -1,17 +1,46 @@
 
 body {
   text-align: center;
+  background-color: #F2DBD4;
 }
 
-#slideshow { 
-    margin: 0 auto;
-    position: relative;
-    width: 100%;
-    padding: 1% 1% 56.25% 1%; /*56.25 is for 16x9 resolution*/
+body p {
+  font-size: 15px;
+  font-family: Architects Daughter;
+  color: #4C4C4C;
+}
+
+body h1{
+  font-size: 20px;
+  color: #4C4C4C;
+}
+
+#addNew{
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  background-color: #FF4179;
+  /* border: none; */
+  color: #ffffff;
+  font-size: 20px;
+  z-index: 33px;
+}
+
+#slideshow {
+    margin: 2%;
+    position: absolute;
+    padding: 20%;
+    width: 80%;
+    height: 90%;
+    left:8%;
 		border-radius:20px;
-		background: rgba(0,0,0,0.2);
-    box-shadow: 0 0 20px rgba(0,0,0,0.6);
-  box-sizing:border-box;
+		background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    box-sizing:border-box;
+    overflow: hidden;
 }
 
 #slideshow > div {
@@ -33,7 +62,7 @@ body {
 	}
 
 .slidebtn {
-	z-index:99;
+	z-index:2px;
 	background:transparent;
 	outline:none;
 	border:none;
@@ -82,7 +111,7 @@ body {
   left:50%;
   bottom:3%;
   transform: translate(-50%, 0);
-  z-index:99;
+  z-index:2px;
   -webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	transition: all 0.3s;
@@ -90,7 +119,7 @@ body {
 }
 
 .slider-dots li {
-  color: #000;
+  color: #C7C7C7;
   display: inline;
   font-size: 48px;
   margin-right: 5px;
@@ -98,5 +127,15 @@ body {
 }
 
 .slider-dots li.active-dot {
-  color: #fff;
+  color: #FF4179;
+}
+
+footer {
+  position:absolute;
+  padding-bottom: 2%;
+  -webkit-padding-before: 3rem;
+  height: 2rem;
+  font: 0.5rem "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
+  color: #FF4179;
 }
