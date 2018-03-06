@@ -6,7 +6,7 @@ app.listen(3000, function () {
   console.log('Example app listening on port 3000!')
 })
 
-app.use(express.static('public'));
+app.use('/dressme',express.static('public'));
 
 // app.get('/page', function (req, res) {
 // 	var fileToSend = "index.html";

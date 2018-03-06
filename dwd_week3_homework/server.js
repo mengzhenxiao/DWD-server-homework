@@ -19,7 +19,7 @@ app.set('view engine', 'ejs');
 // 	res.sendFile("moodpalette.html", {root: './public'}); // Files inside "public" folder
 // });
 
-app.use(express.static('public'));
+app.use('/static',express.static('public'));
 
 
 // index page
