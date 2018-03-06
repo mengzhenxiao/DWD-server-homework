@@ -15,44 +15,75 @@
 <body>
   <div class="section1">
     <img class="backgroundImg" src="">
-    <div class="menuBar">
-    </div>
-    <p class="inspiringQuote">Never go to sleep without a request to your subconscious.</p>
-    <p class="author">THOMAS EDISON</p>
-    <button id="addNew">Write My Journal</button>
+    <!-- https://images.unsplash.com/photo-1515240437165-5d9d2a2cbb51?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=66cc44e534b83add4201d68b21d3ae91&auto=format&fit=crop&w=1650&q=80 -->
+    <img class="shade" src="shade.png">
+    <span class="header">
+      <div class="menuBar">
+
+      </div>
+      <h1>Never go to sleep without a request to your subconscious.</h1>
+      <br>
+      <p>THOMAS EDISON</p>
+      <br>
+      <br>
+      <br>
+      <button id="addNew" onclick="location.href='#form'">Write</button>
+  </span>
   </div>
 
-  <form class="form-signin" method="POST" action="/myjournal">
+  <form id="form" method="POST" action="/myjournal">
+
     <div id="section2">
       <div id="todayDate">
       </div>
+      <br>
+      <br>
       <div class="dailyChallenge">
         <h1>DAILY CHALLENGE</h1>
-        <p class="dailyChallengeContent">challenge</p>
-        <input name="checkBox" type="checkbox">
+        <br>
+        <br>
+        <p class="dailyChallengeContent">Call an old friend I've been meaning to connect with.</p>
+        <br>
+        <!-- <input name="checkBox" type="checkbox" class="checkBox"> -->
+        <label>
+          <input type="checkbox" class="hidden-input" name="checkBox">
+          <span class="your style about checkbox"></span>
+        </label>
       </div>
     </div>
 
     <div id="section3">
       <h1>I am grateful for...</h1>
+      <br>
       <br> 1.
       <input type="text" name="grateful1">
-      <br> 2.
+      <br>
+      <br>2.
       <input type="text" name="grateful2">
-      <br> 3.
+      <br>
+      <br>3.
       <input type="text" name="grateful3">
     </div>
 
     <div id="section4">
       <h1>What I learnt today?</h1>
+      <br>
+      <br>
       <input type="text" name="thingsIlearnt">
     </div>
 
     <div id="section5">
       <h1>How could I have made today even better?</h1>
+      <br>
+      <br>
       <input type="text" name="thingsToBetter">
+      <br>
+      <br>
+      <br>
+      <br>
+      <button id="save" type="submit">Save</button>
     </div>
-    <button id="save" type="submit">Save</button>
+
   </form>
 
 
