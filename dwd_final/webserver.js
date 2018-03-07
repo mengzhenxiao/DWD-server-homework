@@ -14,11 +14,10 @@ var db = mongojs("", ["myjournal"]);
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
+app.listen(80);
+console.log('80 is the magic port');
 
 app.use(express.static('public'));
-
-
-
 
 app.post('/myjournal', function(req, res) {
   var data = {
@@ -54,15 +53,6 @@ app.post('/myjournal', function(req, res) {
         };
         res.render('pages/index', sendData);
       });
-
     }
   });
-
 });
-
-
-
-
-
-app.listen(80);
-console.log('80 is the magic port');
