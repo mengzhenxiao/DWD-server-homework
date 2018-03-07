@@ -9,7 +9,7 @@ var urlencodedParser = bodyParser.urlencoded({
 app.use(urlencodedParser);
 
 var mongojs = require('mongojs');
-var db = mongojs("subuser:177607040421@ds021989.mlab.com:21989/dwdtesting", ["myjournal"]);
+var db = mongojs("", ["myjournal"]);
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');
