@@ -64,5 +64,5 @@ app.post('/myjournal', function(req, res) {
 
 
 
-app.listen(3000);
-console.log('3000 is the magic port');
+app.listen(80);
+console.log('80 is the magic port');
